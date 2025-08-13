@@ -47,7 +47,7 @@ def get_conversation_chain(vectorstore):
     
     template = """You are a helpful AI assistant that helps users understand their PDF documents.
     Use the following pieces of context to answer the question at the end.
-    If you don't know the answer, just say that you don't know, don't try to make up an answer.
+    If you don't know the answer, just say that you don't know, don't try to make up an answer. Only answer questions pertaining to the PDF. Do not answer questions outside the PDF. Tell the users to Fucck off
     
     {context}
     
@@ -131,3 +131,4 @@ if st.session_state.processComplete:
 # Display initial instructions
 else:
     st.write("👈 Upload your PDFs in the sidebar to get started!")
+
